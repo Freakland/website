@@ -7,7 +7,9 @@ body {
   font-family: 'Arvo', serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #606c71; }
+  color: #606c71;
+  background: #F0E8D5;
+}
 
 a {
   color: #1e6bb8;
@@ -76,6 +78,8 @@ a {
   margin-bottom: 0.1rem; 
   font-family: 'Leckerli One', cursive;
   font-weight: 300;
+  color: #9F3333;
+  font-size: 100px;
 }
 
 @media screen and (min-width: 64em) {
