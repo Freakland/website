@@ -135,6 +135,8 @@ footer {
   font-weight: 700!important;
   margin-top: 15px!important;
   border-radius: 0!important;
+  min-width: 0!important;
+  width: auto!important;
 }
 #mc_embed_signup input[type="submit"]:after {
   clear: both!important;
