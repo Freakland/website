@@ -1,0 +1,12 @@
+{
+    "app": {
+        "host": "localhost",
+        "port": "7777",
+        "baseUrl": "http://localhost:7777"
+    },
+    "mongo": {
+        "host": "localhost",
+        "port": "27017",
+        "db": "freeky"
+    }
+}

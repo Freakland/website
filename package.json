@@ -1,0 +1,33 @@
+{
+    "name": "freeky",
+    "version": "0.0.6",
+    "private": true,
+    "dependencies": {
+            "express": "4.11.1",
+            "body-parser": "1.10.2",
+            "config": "1.10.0",
+            "mongoose": "3.8.22",
+            "mongoose-validator": "1.0.3",
+            "moment": "2.5.1",
+            "compression": "1.1.0",
+            "jade": "1.9.1",
+            "express-minify": "0.1.1",
+            "expressify": "https://github.com/lastroom/expressify/archive/master.tar.gz",
+            "express-sitemap": "1.5.3",
+            "i18n": "0.5.0"
+    },
+    "devDependencies": {
+            "errorhandler": "1.0.0",
+            "stylus": "0.49.3",
+            "nib": "1.1.0",
+            "grunt": "~0.4.2",
+            "grunt-contrib-concat": "0.5.0",
+            "grunt-contrib-uglify": "0.7.0",
+            "grunt-contrib-stylus": "0.20.0",
+            "grunt-contrib-watch": "0.6.1",
+            "grunt-contrib-copy": "0.8.0"
+    },
+    "scripts": {
+            "launch": "./script/production.sh"
+    }
+}

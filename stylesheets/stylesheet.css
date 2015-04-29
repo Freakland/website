@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  transition: all linear 0.3s;
+}
+
+html, body {
+  font-family: 'Open sans', sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #1C1919;
+  background: #FFF;
+  font-weight: 400;
+  -o-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  position: static;
+  min-height: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+
+strong { font-weight: 700; }
+a { color: #1C1919; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { list-style: none; }
+
+header { position: relative; height: auto; }
+header > .topbar { position: relative; height: 8rem; }
+header > .topbar > nav { width: 100%; margin: 0 auto; background: #FFF; height: 8rem; padding: 1rem 4rem; z-index: 99; }
+header > .topbar > nav > h1.logo { text-align: left; margin: 0; display: inline-block; }
+header > .topbar > nav > h1.logo > a { display: inline-block; }
+header > .topbar > nav > h1.logo > a > img { max-height: 6rem; }
+header > .topbar > nav > ul { padding: 0; margin: 0; text-align: right; float: right; height: 100%; }
+header > .topbar > nav > ul:after { clear: both; }
+header > .topbar > nav > ul > li { display: inline-block; height: 100%; text-align: right; font-size: 2rem; }
+header > .topbar > nav > ul > li:last-of-type { background: #1c1919; }
+header > .topbar > nav > ul > li:last-of-type > a { color: #FFF; }
+header > .topbar > nav > ul > li:last-of-type > a:hover { text-decoration: none; color: #161919; opacity: .7; }
+header > .topbar > nav > ul > li > a { display: block; height: 100%; vertical-align: middle; padding: 1.5rem; }
+header > .topbar > nav > ul > li > a:hover { text-decoration: none; background: #EDEDED; }
+header > .banner { min-height: 350px; width: 100%; display: table; background: #02779E; }
+header > .banner > div { display: table-cell; position: static; height: 100%; vertical-align: middle; }
+header > .banner > div > p { text-align: center; font-size: 4rem; color: #FFF; }
+
+section { margin: 50px auto 0; width: 800px; display: none; position: static; min-height: 40%; }
+section:first-of-type { display: block; }
+section > p { font-size: 2rem; width: 800px; margin: 0 auto; text-align: justify; }
+section > p + p { margin-top: 30px; }
+
+footer { margin-top: 100px; padding: 30px; }
+footer img { max-height: 40px; }
+footer > p { font-size: 1.2rem; color: #8C8C8C; text-align: center; }

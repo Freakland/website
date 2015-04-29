@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title #{site.name} - #{site.description}
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", type="text/css", href="/public/stylesheets/all.css", media="screen")
+body
+    header.header
+        .topbar.topbar-fixed
+            nav
+                h1.logo
+                    a(href="/")
+                        img(src="/public/images/logo.svg", alt="")
+                ul
+                    if req.path == '/'
+                        li.active
+                            a(href="/") Home
+                    else
+                        li
+                            a(href="/") Home
+                    if req.path == '/services'
+                        li.active
+                            a(href="/services") Services
+                    else
+                        li
+                            a(href="/services") Services
+                    if req.path == '/about'
+                        li.active
+                            a(href="/about") About
+                    else
+                        li
+                            a(href="/about") About
+                    if req.path == '/hire'
+                        li.active
+                            a(href="/hire") Hire
+                    else
+                        li
+                            a(href="/hire") Hire
+        .topbar
+            nav
+                h1.logo
+                    a(href="/")
+                        img(src="/public/images/logo.svg", alt="")
+                ul
+                    if req.path == '/'
+                        li.active
+                            a(href="/") Home
+                    else
+                        li
+                            a(href="/") Home
+                    if req.path == '/services'
+                        li.active
+                            a(href="/services") Services
+                    else
+                        li
+                            a(href="/services") Services
+                    if req.path == '/about'
+                        li.active
+                            a(href="/about") About
+                    else
+                        li
+                            a(href="/about") About
+                    if req.path == '/hire'
+                        li.active
+                            a(href="/hire") Hire
+                    else
+                        li
+                            a(href="/hire") Hire
+        block banner
+    block main
+    footer
+        p
+            | #{site.name} &copy; #{site.year}
+    
+    if environment == 'production'
+        script(src="/public/javascripts/all.min.js", type="text/javascript")
+    else
+        script(src="/app/assets/javascripts/vendor/jquery/dist/jquery.js", type="text/javascript")
+        script(src="/app/assets/javascripts/vendor/modernizr/modernizr.js", type="text/javascript")
+        script(src="/app/assets/javascripts/vendor/jquery-backstretch/jquery.backstretch.js", type="text/javascript")
+        script(src="/app/assets/javascripts/vendor/Snap.svg/dist/snap.svg.js", type="text/javascript")
+        script(src="/app/assets/javascripts/all.js", type="text/javascript")
