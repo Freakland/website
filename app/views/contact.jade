@@ -1,0 +1,29 @@
+extends ./layouts/base.jade
+
+block main
+    section
+        .inner
+            h2.h1 We'll be glad to know about your project
+            hr
+            form(method="post", action="/contact")
+                p
+                    input(style="display: none;")
+                    label Your name
+                    input(type="text", name="fullname", placeholder="Juan Perez", required)
+                p
+                    input(style="display: none;")
+                    label Company name
+                    input(type="text", name="company", placeholder="My Company", required)
+                p
+                    input(style="display: none;", type="email")
+                    label Email address
+                    input(type="email", name="email", placeholder="ejemplo@dominio.com", required)
+                p
+                    input(style="display: none;", type="tel")
+                    label Phone number
+                    input(type="tel", name="phone", placeholder="+52 1 1234567890", required)
+                p
+                    label Your project
+                    textarea(name="project", placeholder="What's your project about?", required)
+                p.right
+                    button.button.button-primary(type="submit") Send

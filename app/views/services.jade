@@ -3,29 +3,56 @@ extends ./layouts/base.jade
 block banner
     .banner.backstretch(data-background="/public/images/bike.jpg")
         div
-            h2.h1 Our services
-            p.h3 We have wonderwall solutions for you.
+            h2.h1 Meet what can we do for you
+            p.h3 We have wonderwall solutions.
 
 block main
     section
-        h3 Análisis de producto
-        p
-            | Antes de desarrollar un producto, se requiere definir lo que se desea y se espera obtener, con base en las necesidades de los clientes, y/o tendencias de mercado.
-        h3 Diseño de producto
-        p
-            | Tenemos diseñadores aliados que son expertos en diseño de interfaces y experiencia de usuario, tu producto no solo se verá bien, si no que será completamente funcional y aplicando las mejores practicas del mundo.
-        h3 Desarrollo de producto
-        p
-            | Si no cuentas con equipo de desarrollo, nosotros podemos hacer el desarrollo por tí, ya sea con nuestros propios recursos o con externos especificados por tí.
-        h3 Medición
-        p
-            | Te ayudamos a medir y analizar el uso de tu sistema, para que al decidir hacer mejorar de tu sistema se puedan hacer actualizaciones estrategicas.
-        h3 Administración de proyecto
-        p
-            | Si tienes todos los recursos, pero necesitas que sean organizados, nosotros podemos administrarlos, con metodologías agiles, que ayudaran a tu producto a ser realidad en un menor tiempo y procurando siempre la calidad del producto.
-        h3 Capacitación y entrenamiento
-        p
-            | Si tu equipo requiere mejorar su productividad o aprender un nuevo lenguaje, metodología de desarrollo o algún tema en especifico del desarrollo y diseño de productos, ponemos a tu disposición nuestros talleres impartidos por nuestra red de profesionales especializados en diversas ramas.
-        h3 Control de calidad
-        p
-            | Solo escribir líneas de código no es suficiente, cada paso que se da debe ser cuidadoso, por ello brindamos el servicio de aseguramiento de calidad, haciendo pruebas de usuario y automatizadas para detección de fallas en tu sistema.
+        .inner
+            h2.h1 Our services
+            p.h3 We help you with analysis, branding, design, development, support and training, you can choose one or all of them.
+            hr
+            p.h2 Analysis
+            p.center Sometimes you need analize every single point of your product, define the minimum viable product to launch it for your customers, let us help, we have a successful history helping with this process.
+            p.h2 Branding
+            p.center We create assets that make your brand stand out.We work with your already existing brand or new one to design everything from logos and stationery to illustrations and icons.
+            p.h2 Design
+            p.center We design for screen and print. We design everything from stationery and flyers to websites and apps.
+            p.h2 Development
+            p.center We have a great successful history creating awesome websites and apps with the latest technologies and standars of the industry. We make it easier for you and clearer for your customers.
+            p.h2 Support
+            p.center We know that when a product is launched is just the start, we give you the possibility to get us near to support your product, monitoring, scaling and all that you need for your product when it's alive.
+            p.h2 Training
+            p.center We know that sometimes your team is the dificulty to build your products. We can help you to make your team much better and get your dreams come true.
+    
+    section.highlight
+        .inner
+            h2.h1 Our process
+            p.h3 We have a tested process that help us to make things right, on time.
+            hr
+            .grid
+                .row
+                    .col-6
+                        p.h2
+                            strong I. Talk
+                        p.h3 We meet you and listen your ideas for your project. Let us invite you a coffee and talk about.
+                    .col-6
+                        p.h2
+                            strong II. Plan
+                        p.h3 We challenge you to think out of the box. We work all the time with you to refine our plan to get the goal before build.
+                .row
+                    .col-6
+                        p.h2
+                            strong III. Build
+                        p.h3 Now that we've listened and planned, we are ready to materialize your project.
+                    .col-6
+                        p.h2
+                            strong IV. Deliver
+                        p.h3 We keep you posted at every stage to guarantee that we'll deliver on time, every time.
+
+    section
+        .inner
+            h2.h1 We are ready to start your project
+            hr
+            p
+                a.button.button-primary(href="/contact") Get in touch

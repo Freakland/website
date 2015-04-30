@@ -1,0 +1,30 @@
+extends ./layouts/base.jade        
+
+block banner
+    .banner.backstretch(data-background="#{cover}")
+        div
+            p.h1
+                img(src="#{logo}", alt="")
+                br
+                | #{name}
+
+block main
+    section
+        .inner
+            h2.h1 #{shortDescription}
+            p.h3 #{longDescription}
+
+    section
+        .demo
+            img(src="#{image}", alt="")
+    
+    section
+        .inner
+            a.button.button-primary(href="//regalodemiel.com") Visit site
+
+    section.highlight
+        .inner
+            h2.h1 We can do this for you too!
+            p
+                a.button.button-primary(href="/about") More about us
+                a.button.button-primary(href="/contact") Get in touch

@@ -1,73 +1,115 @@
 @import "./normalize.styl"
 
-*
-  box-sizing: border-box;
-  transition: all linear 0.3s;
+$black = #393939
+$blackOpaque = rgba(76, 79, 99, .9)
+$white = #FFF
+$whiteOpaque = rgba(255, 255, 255, .8)
+$green = #33B67C
+$pink = #C23355
+$gray = #8C8C8C
+$lightGray = #EDEDED
+$blue = #02779E
+$blueOpaque = rgba(2,119,158,.85)
+$blackShadow = rgba(0, 0, 0, .2)
 
-html, body
-  font-family: 'Open sans', sans-serif;
-  font-size: 10px;
-  line-height: 1.5;
-  color: #1C1919;
-  background: #FFF;
-  font-weight: 400;
-  -o-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  position: static;
-  min-height: 100%;
-  height: 100%;
-
-h1, h2, h3, h4, h5, h6
-  font-weight 400
-
-h1, .h1
-  margin-top: 0;
-  font-size 4rem
-
-h2, .h2
-  font-size 3rem
-  text-align center
-
-.h3
-  text-align center
-
-h3, .h3
-  font-size 2.5rem
-
+* { box-sizing: border-box; transition: all linear 0.3s; font-weight: 400; -o-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
+html { font-size: 10px; }
+html, body { font-family: 'Open sans', sans-serif; line-height: 1.3; color: $black; background: $white; position: static; min-height: 100%; height: 100%; }
+body { font-size: 2rem; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+h1, .h1 { font-size: 4rem; }
+h2, .h2 { font-size: 3rem; }
+h3, .h3 { font-size: 2.5rem; }
+hr { margin: 30px 0; border: 0; height: 1px; background: $lightGray; }
+p { font-size: 2rem; }
 strong { font-weight: 700; }
-a { color: #1C1919; text-decoration: none; }
+a { color: $black; text-decoration: none; }
 a:hover { text-decoration: underline; }
 ul { list-style: none; }
 
 header { position: relative; height: auto; }
-header > .topbar { position: relative; height: 8rem; }
-header > .topbar > nav { width: 100%; margin: 0 auto; background: #FFF; height: 8rem; padding: 0 4rem; z-index: 99; }
+header > .topbar-fake { height: 8rem; }
+header > .topbar { position: fixed; height: 8rem; width: 100%; top: 0; z-index: 99999; box-shadow: 0 1px 1px $blackShadow; }
+header > .topbar > nav { width: 100%; margin: 0 auto; background: $black; height: 8rem; padding: 0 4rem; }
 header > .topbar > nav > h1.logo { text-align: left; margin: 0; display: inline-block; }
 header > .topbar > nav > h1.logo > a { display: inline-block; height: 100% }
 header > .topbar > nav > h1.logo > a > img { margin-top: 1rem; max-height: 6rem; }
 header > .topbar > nav > ul { padding: 0; margin: 0; text-align: right; float: right; height: 100%; }
 header > .topbar > nav > ul:after { clear: both; }
 header > .topbar > nav > ul > li { display: inline-block; height: 100%; text-align: right; font-size: 2rem; }
-header > .topbar > nav > ul > li.active { background: #EDEDED; }
-header > .topbar > nav > ul > li:last-of-type { background: #1c1919; }
-header > .topbar > nav > ul > li:last-of-type > a { color: #FFF; }
-header > .topbar > nav > ul > li:last-of-type > a:hover { text-decoration: none; color: #FFF; background: #33B67C; opacity: 1; }
-header > .topbar > nav > ul > li:last-of-type.active > a { background: #33B67C; opacity: 1; }
-header > .topbar > nav > ul > li > a { display: block; height: 100%; vertical-align: middle; padding: 2.5rem; }
-header > .topbar > nav > ul > li > a:hover { text-decoration: none; background: #EDEDED; opacity: .7; }
-header > .banner { min-height: 350px; width: 100%; display: table; }
-header > .banner > div { background: rgba(2,119,158,.85); display: table-cell; position: static; height: 100%; width: 100%; vertical-align: middle; }
-header > .banner > div > * { text-align: center; color: #FFF; }
+header > .topbar > nav > ul > li.menu { display: none; }
+header > .topbar > nav > ul > li > a { display: block; height: 100%; vertical-align: middle; padding: 2.5rem; color: $white; }
+header > .topbar > nav > ul > li > a:hover { text-decoration: none; color: $black; background: $whiteOpaque; }
+header > .topbar > nav > ul > li.active { background: $lightGray; color $black; }
+header > .topbar > nav > ul > li.active > a { color: $black; }
+header > .banner { min-height: 400px; width: 100%; display: table; }
+header > .banner > div { background: $blueOpaque; display: table-cell; position: static; height: 100%; width: 100%; vertical-align: middle; }
+header > .banner > div > * { text-align: center; color: $white; }
 
-header > .topbar.topbar-fixed { position: fixed; top: 0; left: 0; width: 100%; }
-header > .topbar.topbar-fixed > nav { border-bottom: 1px #EDEDED solid; }
+section > .inner { text-align: center; width: 800px; margin: 0 auto; padding: 4rem 0 4rem }
+section > .inner p + p { margin-top: 30px; }
+section > .inner p a + a { margin-left: 30px; }
+section > .inner > form { width: 100%; font-size: 2rem; }
+section > .inner > form > p > label { display: inline-block; width: 100%; text-align: left; margin-bottom: 15px; }
+section > .inner > form > p > input, section > .inner > form > p > textarea { width: 100%; padding: 1rem;  border: 3px $lightGray solid; }
+section > .inner > form > p > input:focus, section > .inner > form > p > textarea:focus { border-color: $black; outline: none; }
+section > .demo { padding: 4rem; background: $lightGray; }
+section > .demo > img { margin: 0 auto; max-width: 100%; }
 
-section { margin: 50px auto 0; width: 800px; position: static; min-height: 40%; }
-section > p { font-size: 2rem; width: 800px; margin: 0 auto; text-align: justify; }
-section > p + p { margin-top: 30px; }
+section > .canvas { position: relative; height: 400px; }
+section > .canvas > div { position: absolute; width: 50%; height: 200px; overflow: hidden; }
+section > .canvas > div > .button-primary { position: absolute; bottom: -100px; width: 100%; border: 0; background: $blackOpaque; }
+section > .canvas > div > p { text-align: center; }
+section > .canvas > div > p > img { margin-top: 3rem; height: 8rem; }
+section > .canvas > div:hover > .button-primary { bottom: 0; color: $white; }
+section > .canvas > div:hover > .button-primary:hover { background: $black; }
+section > .canvas > div:first-of-type { top: 0; left: 0; height: 400px; }
+section > .canvas > div:first-of-type > p > img { margin-top: 10rem; height: 12rem; }
+section > .canvas > div:nth-child(2n) { top: 0; right: 0; }
+section > .canvas > div:last-of-type { top: 200px; right: 0; }
 
-footer { margin-top: 100px; padding: 30px; }
-footer img { max-height: 40px; }
-footer > p { font-size: 1.2rem; color: #8C8C8C; text-align: center; }
+.grid { width: 100%; }
+.grid > .row { width: 100%; }
+.grid > .row > .col-6 { display: inline-block; width: 50%; padding: 2rem; }
+.grid > .row > .col-6:first-child { padding-left: 0; }
+.grid > .row > .col-6:last-child { padding-right: 0; }
+
+.menu-items { display: none; position: fixed; top: 8rem; left: 0; width: 100%; height: 100%; background: $black; z-index: 9999999; }
+.menu-items > ul { margin: 0; padding: 0; }
+.menu-items > ul > li > a { width: 100%; display: inline-block; padding: 2rem; background: $white; color: $black; }
+.menu-items > ul > li > a:hover { text-decoration: none; background: $gray; color: $white; }
+
+.button { background: none; padding: 10px 20px; font-size: 3rem; font-weight: 700; }
+.button-primary { color: $black; border: 3px $black solid; display: inline-block; margin-top: 15px; }
+.button-primary:hover { background: $black; color: $white; text-decoration: none; }
+.button-primary.button-inverse { border: 3px $white solid; color: $white; }
+.button-primary.button-inverse:hover { background: $white; color: $black; }
+
+.highlight { background: $green; color: $white; }
+.highlight hr { background: $white; }
+.highlight .button { border-color: $white; color: $white; }
+.highlight .button:hover { background: $white; color: $green; }
+
+.quote { font-size: 4.5rem; margin-bottom: 0; }
+.quote + .h3 { margin-top: 5px; }
+p > a.logo { margin-right: 30px; }
+p > a.logo > img { max-height: 6rem; }
+p > a.logo:last-of-type { margin-right: 0; }
+
+footer { margin-top: 10px; padding: 30px; }
+footer > p { font-size: 1.5rem; color: #8C8C8C; text-align: center; }
+
+@media (max-width: 800px) {
+    header > .topbar > nav > ul > li { display: none; }
+    header > .topbar > nav > ul > li.menu { display: inline-block; }
+    header > .banner > div { padding: 0 2rem; }
+    
+    section > .inner { width: 100%; padding: 4rem; }
+    section > .canvas > div > .button-primary { font-size: 2rem; bottom: 0; }
+    
+    .grid > .row > .col-6 { width: 100%; padding: 0; }
+}
+
+@media (max-width: 620px) {
+    section > .inner p a + a { margin-left: 0; }
+}
