@@ -1,0 +1,12 @@
+{
+    "app": {
+        "host": "localhost",
+        "port": "7777",
+        "baseUrl": "http://freeky.co"
+    },
+    "mongo": {
+        "host": "localhost",
+        "port": "27017",
+        "database": "freeky"
+    }
+}

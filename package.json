@@ -28,6 +28,6 @@
             "grunt-contrib-copy": "0.8.0"
     },
     "scripts": {
-            "launch": "./script/production.sh"
+            "launch": "./deploy/launch.sh"
     }
 }
