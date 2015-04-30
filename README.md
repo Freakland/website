@@ -1,4 +1,5 @@
 Freeky Co.
+===
 
-Freeky website
+Website with the company information.
 
