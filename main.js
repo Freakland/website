@@ -1,3 +1,5 @@
+process.chdir(__dirname);
+
 var express = require('express'),
     expressify = require('expressify'),
     mongoose = require('mongoose'),
@@ -13,8 +15,6 @@ var app = expressify.init({
     basepath: __dirname,
     express: express
 });
-
-process.chdir(__dirname);
 
 mongoose.connect('mongodb://' + config.mongo.host + '/' + config.mongo.database);
 
