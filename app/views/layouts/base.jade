@@ -48,8 +48,37 @@ html(lang="en")
             block banner
         block main
         footer
-            p
-                | #{site.name} &copy; #{site.year}
+            .grid
+                .row
+                    .col-6
+                        table
+                            tr
+                                td
+                                    h5 Agency
+                                    ul
+                                        li
+                                            a(href="/services") Services
+                                        li 
+                                            a(href="/about") About
+                                        li
+                                            a(href="/contact") Hire us
+                                td
+                                    h5 Social
+                                    ul
+                                        li
+                                            a(href="//github.com/freekyco") Github
+                                        li 
+                                            a(href="//freekyco.tumblr.com") Tumblr
+                                td
+                                    h5 Contact
+                                    ul
+                                        li
+                                            a(href="mailto:hola@freeky.co") hola@freeky.co
+                                        li
+                                            a(href="tel:+5219991622695") +52 1 999 162 2695
+                                        li Marina nacional
+                    .col-6
+                        img(src="/public/images/logo-black.svg", alt="Freeky &copy; 2015")
         
         script.
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
