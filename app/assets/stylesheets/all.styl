@@ -36,7 +36,7 @@ header > .topbar > nav > h1.logo > a { display: inline-block; height: 100% }
 header > .topbar > nav > h1.logo > a > img { margin-top: 1rem; max-height: 6rem; }
 header > .topbar > nav > ul { padding: 0; margin: 0; text-align: right; float: right; height: 100%; }
 header > .topbar > nav > ul:after { clear: both; }
-header > .topbar > nav > ul > li { display: inline-block; height: 100%; text-align: right; font-size: 2rem; }
+header > .topbar > nav > ul > li { float: left; display: inline-block; height: 100%; font-size: 2rem; width: auto; }
 header > .topbar > nav > ul > li.menu { display: none; }
 header > .topbar > nav > ul > li > a { display: block; height: 100%; vertical-align: middle; padding: 2.5rem; color: $white; }
 header > .topbar > nav > ul > li > a:hover { text-decoration: none; color: $black; background: $whiteOpaque; }
@@ -45,6 +45,7 @@ header > .topbar > nav > ul > li.active > a { color: $black; }
 header > .banner { min-height: 400px; width: 100%; display: table; }
 header > .banner > div { background: $blueOpaque; display: table-cell; position: static; height: 100%; width: 100%; vertical-align: middle; }
 header > .banner > div > * { text-align: center; color: $white; }
+header > .banner > div img { max-height: 200px; }
 
 section > .inner { text-align: center; width: 800px; margin: 0 auto; padding: 4rem 0 4rem }
 section > .inner p + p { margin-top: 30px; }
