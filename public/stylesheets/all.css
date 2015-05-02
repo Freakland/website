@@ -546,12 +546,21 @@ footer .grid > .row > [class*="col-"]:last-child,
 footer .grid > .row > [class^="col-"]:last-child {
   text-align: right;
 }
-footer .grid > .row > [class*="col-"] > table,
-footer .grid > .row > [class^="col-"] > table {
+footer .grid > .row > [class*="col-"] > p,
+footer .grid > .row > [class^="col-"] > p {
+  margin: 0;
   width: 100%;
+  overflow-wrap: break-word;
+}
+footer .grid > .row > [class*="col-"] > p + p,
+footer .grid > .row > [class^="col-"] > p + p {
+  margin-top: 1.5rem;
+}
+footer .grid > .row > [class*="col-"] small {
+  font-size: 0.7em;
 }
 footer .grid > .row img {
-  margin-top: 10px;
+  margin-top: 2.5rem;
 }
 footer h5 {
   font-weight: bold;
@@ -589,6 +598,13 @@ footer ul > li > a {
   .grid > .row > .col-6 {
     width: 100%;
     padding: 0;
+  }
+  footer .grid > .row > [class*="col-"]:last-child,
+  footer .grid > .row > [class^="col-"]:last-child {
+    text-align: left;
+  }
+  footer .grid > .row img {
+    max-width: 60%;
   }
 }
 @media (max-width: 620px) {

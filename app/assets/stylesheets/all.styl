@@ -103,8 +103,10 @@ p > a.logo:last-of-type { margin-right: 0; }
 
 footer { padding: 8rem 4rem; background: $lightGray; color: $black; }
 footer .grid > .row > [class*="col-"]:last-child, footer .grid > .row > [class^="col-"]:last-child { text-align: right; }
-footer .grid > .row > [class*="col-"] > table, footer .grid > .row > [class^="col-"] > table { width: 100%; }
-footer .grid > .row img { margin-top: 10px; }
+footer .grid > .row > [class*="col-"] > p, footer .grid > .row > [class^="col-"] > p { margin: 0; width: 100%; overflow-wrap: break-word; }
+footer .grid > .row > [class*="col-"] > p + p, footer .grid > .row > [class^="col-"] > p + p { margin-top: 1.5rem; }
+footer .grid > .row > [class*="col-"] small { font-size: .7em; }
+footer .grid > .row img { margin-top: 2.5rem; }
 footer h5 { font-weight: bold; font-size: 2rem; margin: 0 0 10px; }
 footer ul { margin: 0; padding: 0; }
 footer ul > li { font-size: 1.6rem; }
@@ -119,6 +121,8 @@ footer ul > li > a { color: $black; }
     section > .canvas > div > .button-primary { font-size: 2rem; bottom: 0; }
     
     .grid > .row > .col-6 { width: 100%; padding: 0; }
+    footer .grid > .row > [class*="col-"]:last-child, footer .grid > .row > [class^="col-"]:last-child { text-align: left; }
+    footer .grid > .row img { max-width: 60%; }
 }
 
 @media (max-width: 620px) {
