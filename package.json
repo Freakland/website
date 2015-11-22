@@ -1,6 +1,6 @@
 {
-    "name": "freeky",
-    "version": "0.0.6",
+    "name": "freakland",
+    "version": "0.0.7",
     "private": true,
     "dependencies": {
             "express": "4.11.1",
@@ -28,6 +28,7 @@
             "grunt-contrib-copy": "0.8.0"
     },
     "scripts": {
-            "launch": "./deploy/launch.sh"
+        "launch": "./deploy/launch.sh",
+        "start": "node main.js"
     }
 }
